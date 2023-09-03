@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Permanent+Marker&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.main {
+  max-width: 960px;
+  margin: 0px auto;
+  padding: 0px 15px;
   min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.notes-title {
+  color: #2a2a2a;
+  font-size: 38px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3em;
+  font-weight: 400;
+}
+
+.notes {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+}
+
+.note {
+  box-shadow: 3px 3px 5px #888888;
+  background-color: #ffffcc;
+  border: 2px solid #999966;
+  font-family: 'Caveat', cursive;
+  font-size: 2em;
+  padding: 10px;
+  margin: 20px 0;
+  color: rgb(19, 19, 19);
+  padding: 20px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  word-wrap: break-word;
 }
 
-.App-link {
-  color: #61dafb;
+.note textarea {
+  white-space: pre-wrap;
+  background: transparent;
+  border: none;
+  color: rgb(19, 19, 19);
+  resize: none;
+  font-size: 1em;
+  font-family: 'Caveat', cursive;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.note textarea:focus {
+  outline: none;
+}
+
+.note textarea::placeholder {
+  color: rgb(19, 19, 19);
+}
+.note-save{
+    background-color: #FF5733;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+.note-save:hover{
+    background-color: #E84100;
 }
