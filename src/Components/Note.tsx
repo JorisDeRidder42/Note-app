@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Note = () => {
+export const Note = ({text}:any) => {
   return (
     <div className='note'>
-        This is a note
+        {text}
     </div>
   )
 }

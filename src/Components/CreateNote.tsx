@@ -1,6 +1,6 @@
 import React from "react";
 
-const CreateNote = () => {
+const CreateNote = ({inputText} : any)=> {
 
   return (
     <>
@@ -10,6 +10,7 @@ const CreateNote = () => {
             rows={5}
             placeholder="Type..."
             maxLength={100}
+            value={inputText}
         />
             <div className="note-footer">
                 <button className="note-save">Save</button>
